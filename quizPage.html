@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<script type="text/javascript" src="javascript/Quiz.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/Quiz.css">
+		<link rel="stylesheet" type="text/css" href="css/Student1.css">
+		<link rel="stylesheet" type="text/css" href="css/Student2.css">
+		<link rel="stylesheet" type="text/css" href="css/Student3.css">
+		<link rel="stylesheet" type="text/css" href="css/Student4.css">
+
+		<script type="text/javascript" src="javascript/javascript.js"> </script>
+		 <script type="text/javascript" src="javascript/fontsize.js"></script>
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <!-- CDN LIBRARY FOR animate.css, smoothScrolling, parallax and waypoints  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> <!-- CDN LIBRARY FOR animate.css -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  <!-- CDN LIBRARY FOR waypoints -->
+		<script type="text/javascript" src="animation/jquery.waypoints.min.js"></script>
+		<script type="text/javascript" src="animation/waypoints.js"></script>
+		<link rel = "stylesheet" type = "text/css" href ="animation/waypoints.css" />
+		<link rel = "stylesheet" type = "text/css" href ="animation/animate.css" />
+
+</head>
+
+<body>
+
+		<div id="coverSpace"></div>
+		<header class="quizHeader">
+			
+
+			<div class="os-animation" data-os-animation="bounceIn" data-os-animation-delay="0.6">
+
+				<h2 id="headingInBgg" >Quick Quiz</h2>
+			</div>
+		</header>
+		
+		
+            <nav>
+                <span class="os-animation" data-os-animation="slideInUp" data-os-animation-delay="0.6">
+
+                    <img id="logo" src="css/img/logo2.png" onclick="window.location.href='homePage.html'">
+                </span>
+
+
+
+                <input   type="button" name="home" value="Home"  class="button button3" onclick="window.location.href='homePageFinal.html' " >
+
+                <input type="button" name="home" value="Gallery"  class="button button3" onclick="window.location.href='galleryPage.html' " >
+                <input  type="button" name="home" value="Store"  class="button button3" onclick="window.location.href='cart/Art_Craft.html' " >
+                <input  id="selectedPage" type="button" name="home" value="Quiz"  class="button button3" onclick="window.location.href='quizPage.html' " >
+                <input    type="button" name="home" value="Site Map"  class="button button3" onclick="window.location.href='siteMapPage.html' " >
+                <input type="button" name="home" value="About Us"  class="button button3" onclick="window.location.href='aboutus.html' " >
+
+                <div id="btnFontChageContainer">
+
+                    <input type="button" name="" value="-" class="button btnFontChage" onclick="decreaseFontSize()">
+
+
+                    <input type="button" name="" value="+" class="button btnFontChage" onclick="increaseFontSize()">
+                </div>
+             </nav>
+
+
+
+	
+
+	<section id="quizSec1">
+
+		<p id="mainHeading" >Take this quick quiz and know how much you know about Sri Lanaka</p>
+
+
+		<table style="width:800px" align="center" margin-top="" id="questionTable">
+				<tr>
+					<td>
+						<div>
+							<h1 id="quizTest">
+								QuiZ Test 
+							</h1>
+							<br>
+								<div id="startDescription">This is a quiz regarding our tourism category. This quiz consist ot total 10 questions. Total time is 5 minutes. For each right answer you will be awarded 2 points. And for a wrong answer you will lose 1 mark.</div>
+							</div>
+							<div  class="hidden" id="time">Time left = <span id="timerCounter"/>
+							</div>
+                            
+                        <br><br>
+							<div id="startButton">
+                                <button a class="startButton" style="vertical-align:middle" onclick="startQuiz()"><span>Start Quiz</span></button>
+								</div>
+								
+                        <div id = "Questions" style="display:none">
+				            <form name = "Questions_form">
+				            <p class="question"> 1) Sri lanka is also known as ?</p>
+				                <ul>
+								    <input type = "radio" id = "q1_a" value = "1" name = "quiz1" >Boat of pacific<br/>
+								    <input type = "radio" id = "q1_b" value = "2" name = "quiz1">Pearl of the indian ocean<br/>
+								    <input type = "radio" id = "q1_c" value = "3" name = "quiz1">Hawaii<br/>
+				                </ul>
+                                
+                            <p class="question"> 2) What is the Sri Lanka's international dialing code ?</p>
+				                <ul>
+								    <input type = "radio" id = "q2_a" value = "1" name = "quiz2" >+94<br/>
+								    <input type = "radio" id = "q2_b" value = "2" name = "quiz2">+99<br/>
+								    <input type = "radio" id = "q2_c" value = "3" name = "quiz2">+92<br/>
+				                </ul>
+                                
+                                <p class="question"> 3) What is the mother language in Sri Lanka ?</p>
+				                <ul>
+								    <input type = "radio" id = "q3_a" value = "1" name = "quiz3" >English<br/>
+								    <input type = "radio" id = "q3_b" value = "2" name = "quiz3">Tamil<br/>
+								    <input type = "radio" id = "q3_c" value = "3" name = "quiz3">Sinhala<br/>
+				                </ul>
+                                
+                            <p class="question"> 4) What currency is used in Sri Lanka? ?</p>
+				                <ul>
+								    <input type = "radio" id = "q4_a" value = "1" name = "quiz4" >Sri Lankan rupees<br/>
+								    <input type = "radio" id = "q4_b" value = "2" name = "quiz4">Dollers<br/>
+								    <input type = "radio" id = "q4_c" value = "3" name = "quiz4">Pounds<br/>
+				                </ul>
+                                
+                                <p class="question"> 5) What is the capital of Sri Lanka ?</p>
+				                <ul>
+								    <input type = "radio" id = "q5_a" value = "1" name = "quiz5" >Trincomalee<br/>
+								    <input type = "radio" id = "q5_b" value = "2" name = "quiz5">Sri Jayawardenepura Kotte<br/>
+								    <input type = "radio" id = "q5_c" value = "3" name = "quiz5">Colombo<br/>
+				                </ul>
+                                
+                            <p class="question"> 6) What is the longest river in Sri Lanka ?</p>
+				                <ul>
+								    <input type = "radio" id = "q6_a" value = "1" name = "quiz6" >Padma<br/>
+								    <input type = "radio" id = "q6_b" value = "2" name = "quiz6">Amban<br/>
+								    <input type = "radio" id = "q6_c" value = "3" name = "quiz6">Mahaweli<br/>
+				                </ul>
+                                
+                                <p class="question"> 7) What is the highest point in Sri lanka ?</p>
+				                <ul>
+								    <input type = "radio" id = "q7_a" value = "1" name = "quiz7" >Pidurutalagala<br/>
+								    <input type = "radio" id = "q7_b" value = "2" name = "quiz7">Kirigalpotta<br/>
+								    <input type = "radio" id = "q7_c" value = "3" name = "quiz7">Adam’s Peak<br/>
+				                </ul>
+                                
+                            <p class="question"> 8) When did Sri Lanka become independent? ?</p>
+				                <ul>
+								    <input type = "radio" id = "q8_a" value = "1" name = "quiz8" >24 Novenmber 1942<br/>
+								    <input type = "radio" id = "q8_b" value = "2" name = "quiz8">18 Augest 1945<br/>
+								    <input type = "radio" id = "q8_c" value = "3" name = "quiz8">4 February 1948<br/>
+				                </ul>
+                                
+                                <p class="question"> 9) Which strait separates Sri Lanka from India? ?</p>
+				                <ul>
+								    <input type = "radio" id = "q9_a" value = "1" name = "quiz9" >Strait of Hormus<br/>
+								    <input type = "radio" id = "q9_b" value = "2" name = "quiz9">Palk Strait<br/>
+								    <input type = "radio" id = "q9_c" value = "3" name = "quiz9">Strait of Malacca<br/>
+				                </ul>
+                                
+                            <p class="question"> 10) How many monsoons for a year in Sri Lanka?</p>
+				                <ul>
+								    <input type = "radio" id = "q10_a" value = "1" name = "quiz10" >Two<br/>
+								    <input type = "radio" id = "q10_b" value = "2" name = "quiz10">One<br/>
+								    <input type = "radio" id = "q10_c" value = "3" name = "quiz10">Three<br/>
+				                </ul>
+                                
+				            </form>
+                            <div id="submitButton">
+                            <button class="submitButton" style="vertical-align:middle" onclick="Submit()"><span>Submit</span></button>
+                                </div>
+                            
+				        </div>
+                        
+				    </td>
+				</tr>
+            </table>
+			
+                <div class="hidden" id="correctMarksPage">
+					<h1 id = "quizResults" align="center">
+					   <font color = "green">QuiZ Test </font>
+					</h1>
+					<h3 id = "finalResults" align="center">
+					   <font color="red">Your Final Results</font>
+                    </h3>
+					<div id="Results" style="text-align:center" > Text </div>
+					<div id="durationTime" style="text-align:center">Text</div><br>
+					<table style="width:800px" align="center" margin-top="0px" id="marksResults">
+					<tr>
+					   <td>
+					      <p class="question1"> 1) Sri lanka is also known as ?</p>
+                                <ul>
+                                    <p id="A1">Boat of pacific</p>
+                                    <p id="A2">Pearl of the indian ocean</p>
+                                    <p id="A3">Hawaii</p>
+                                </ul>
+                        </td>
+				    </tr>
+                        
+                    <tr>
+					   <td>
+                            <p class="question2"> 2) What is the Sri Lanka's international dialing code ?</p>
+                                <ul>
+                                    <p id="A4">+94</p>
+                                    <p id="A5">+99</p>
+                                    <p id="A6">+92</p>
+                                </ul>
+                        </td>
+				    </tr>
+                        
+                    <tr>
+					   <td>
+                            <p class="question3"> 3) What is the mother language in Sri Lanka ?</p>
+                                <ul>
+                                    <p id="A7">English</p>
+                                    <p id="A8">Tamil</p>
+                                    <p id="A9">Sinhala</p>
+                                </ul>
+                        </td>
+				    </tr>
+                        
+                    <tr>
+					   <td>
+                            <p class="question4"> 4) What currency is used in Sri Lanka? ?</p>
+                                <ul>
+                                    <p id="A10">Sri Lankan rupees</p>
+                                    <p id="A11">Dollers</p>
+                                    <p id="A12">Pounds</p>
+                                </ul>
+                        </td>
+				    </tr>
+                    
+                    <tr>
+					   <td>
+                            <p class="question5"> 5) What is the capital of Sri Lanka ?</p>
+                                <ul>
+                                    <p id="A13">Trincomalee</p>
+                                    <p id="A14">Sri Jayawardenepura Kotte</p>
+                                    <p id="A15">Colombo</p>
+                                </ul>
+                        </td>
+				    </tr>
+                        
+                    <tr>
+					   <td>
+                            <p class="question6"> 6) What is the longest river in Sri Lanka ?</p>
+                                <ul>
+                                    <p id="A16">Padma</p>
+                                    <p id="A17">Amban</p>
+                                    <p id="A18">Mahaweli</p>
+                                </ul>
+                        </td>
+				    </tr>
+                        
+                    <tr>
+					   <td>
+                            <p class="question7"> 7) What is the highest point in Sri lanka ?</p>
+                                <ul>
+                                    <p id="A19">Pidurutalagala</p>
+                                    <p id="20">Kirigalpotta</p>
+                                    <p id="A21">Adam’s Peak</p>
+                                </ul>
+                        </td>
+				    </tr>
+                        
+                    <tr>
+					   <td>
+                            <p class="question8"> 8) When did Sri Lanka become independent? ?</p>
+                                <ul>
+                                    <p id="A22">24 Novenmber 1942</p>
+                                    <p id="A23">18 Augest 1945</p>
+                                    <p id="A24">4 February 1948</p>
+                                </ul>
+                        </td>
+				    </tr>
+                        
+                    <tr>
+					   <td>
+                            <p class="question9"> 9) Which strait separates Sri Lanka from India? ?</p>
+                                <ul>
+                                    <p id="A25">Strait of Hormus</p>
+                                    <p id="A26">Palk Strait</p>
+                                    <p id="A27">Strait of Malacca</p>
+                                </ul>
+                        </td>
+				    </tr>
+                        
+                    <tr>
+					   <td>
+                            <p class="question10"> 10) How many monsoons for a year in Sri Lanka?</p>
+                                <ul>
+                                    <p id="A28">Two</p>
+                                    <p id="A29">One</p>
+                                    <p id="A30">Three</p>
+                                </ul>
+                        </td>
+				    </tr>
+                    </table>
+
+                </div>
+
+
+		
+		
+
+	</section>
+
+
+	
+            <footer>
+                <center>
+
+
+
+                    <a href="#"><img id="socialNetworkImg" src="css/img/social/fb.png" ></a>
+
+                    <img id="socialNetworkImg" src="css/img/social/insta.png">
+                    <img id="socialNetworkImg" src="css/img/social/twitter.png">
+
+
+
+                    <h5>Copyrights© Team Lalalala</h5>
+                    <h5>Tel - +94 779141958 | Fax - 011 2230530</h5>
+
+
+                    <div>
+
+
+                       	<input type="button" name="" value="Click to view who made this page" class="button btnViewMaker" onclick="window.location.href='Student3CV.html'">
+
+
+
+
+                    </div>
+
+
+
+
+
+
+                </center>
+            </footer>
+
+
+
+
+</body>
+</html>

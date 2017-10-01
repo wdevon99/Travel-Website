@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gallery</title>
+        <link rel = "stylesheet" type = "text/css" href = "css/main.css" />
+       
+
+        <link rel="stylesheet" type="text/css" href="css/Student1.css">
+        <link rel="stylesheet" type="text/css" href="css/Student2.css">
+        <link rel="stylesheet" type="text/css" href="css/Student3.css">
+        <link rel="stylesheet" type="text/css" href="css/Student4.css">
+
+
+        <script src="javascript/thumbnailpage.js"> </script>
+         <script type="text/javascript" src="javascript/fontsize.js"></script>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <!-- CDN LIBRARY FOR animate.css, smoothScrolling, parallax and waypoints  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> <!-- CDN LIBRARY FOR animate.css -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  <!-- CDN LIBRARY FOR waypoints -->
+        <script type="text/javascript" src="animation/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="animation/waypoints.js"></script>
+        <link rel = "stylesheet" type = "text/css" href ="animation/waypoints.css" />
+        <link rel = "stylesheet" type = "text/css" href ="animation/animate.css" />
+        
+    </head>
+    <body>
+
+        <div id="coverSpace"></div>
+
+        <header class="galleryPageHeader">
+
+         <div class="os-animation" data-os-animation="bounceIn" data-os-animation-delay="0.6">
+
+            <h2 id="headingInBgg" >GALLERY</h2>
+         </div>
+
+        </header>
+
+       
+
+
+        
+        
+            <nav>
+                <span class="os-animation" data-os-animation="slideInUp" data-os-animation-delay="0.6">
+
+                    <img id="logo" src="css/img/logo2.png" onclick="window.location.href='homePage.html'">
+                </span>
+
+
+
+                <input   type="button" name="home" value="Home"  class="button button3" onclick="window.location.href='homePageFinal.html' " >
+
+                <input id="selectedPage" type="button" name="home" value="Gallery"  class="button button3" onclick="window.location.href='galleryPage.html' " >
+                <input  type="button" name="home" value="Store"  class="button button3" onclick="window.location.href='cart/Art_Craft.html' " >
+                <input type="button" name="home" value="Quiz"  class="button button3" onclick="window.location.href='quizPage.html' " >
+                <input    type="button" name="home" value="Site Map"  class="button button3" onclick="window.location.href='siteMapPage.html' " >
+                <input type="button" name="home" value="About Us"  class="button button3" onclick="window.location.href='aboutus.html' " >
+
+                <div id="btnFontChageContainer">
+
+                    <input type="button" name="" value="-" class="button btnFontChage" onclick="decreaseFontSize()">
+
+
+                    <input type="button" name="" value="+" class="button btnFontChage" onclick="increaseFontSize()">
+                </div>
+            </nav>
+
+
+
+
+
+        <div id="galleryContainer">
+            <center>
+
+            <div class="dropdown">
+                <button class="dropbtn">Background Color</button>
+                <div class="dropdown-content">
+                    <a onclick="backblack()">Black</a>
+                    <a onclick="backwhite()">White</a>
+                    <a onclick="backgreen()">Blue</a>
+                 </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Text Color</button>
+                <div class="dropdown-content">
+                    <a onclick="textred()">Red</a>
+                    <a onclick="textblue()">Blue</a>
+                    <a onclick="textblack()">Black</a>
+                    <a onclick="textwhite()">White</a>
+                </div>
+            </div>
+ 
+            </center>
+
+
+           
+
+
+          
+<section id="ImageSec">
+            <div class="center">
+                <img  alt="Seegiriya" src="css/img/gallery/one.jpg" id="mainImg" alt="Image of Lion Rock" >
+            </div>
+
+            <div class="container">
+
+
+                <p id="des">
+                    Seegiriya is an ancient rock fortress of <b>King Kashapa</b>.Seegiriya is also called as the Lion Rock.This was abandoned after the king's death. Seegiriya Mountains height is recorded as <b>660 feet</b>.
+
+
+                </p>
+
+               
+            </div>
+
+            <div id="smallImagesContainer">
+                <center>
+                
+                 <ul>
+                    <li>
+                    <img id="smallImage" alt="Seegiriya Fort" src="css/img/gallery/one.jpg" 
+                         onclick="change1()" alt="Icon of Lion Rock" />
+                    </li>
+            
+                    <li>
+                    <img  id="smallImage" alt="Nallur Temple" src="css/img/gallery/two.jpg" 
+                        onclick="change2()"  alt="Icon of Nallur Temple"/>
+                    </li>
+            
+                    <li>
+                    <img  id="smallImage" alt="Galle Fort" src="css/img/gallery/three.jpg" 
+                         onclick="change3()"  alt="Icon of Galle Fort"/>
+                    </li>   
+                
+                    <li>
+                    <img  id="smallImage" alt="World's End" src="css/img/gallery/four.jpg" 
+                         onclick="change4()" alt="Icon of World's End"  />
+                    </li>
+        
+                    <li>
+                    <img  id="smallImage" alt="Siripadaya" src="css/img/gallery/five.jpg" 
+                         onclick="change5()"  alt="Icon of Adam's Peak"/>
+                    </li>
+                </ul>
+                </center>
+            </div>
+            </section>
+            
+
+
+        </div>
+
+
+       
+
+            <footer>
+                <center>
+
+
+
+                    <a href="#"><img id="socialNetworkImg" src="css/img/social/fb.png" ></a>
+
+                    <img id="socialNetworkImg" src="css/img/social/insta.png">
+                    <img id="socialNetworkImg" src="css/img/social/twitter.png">
+
+
+
+                    <h5>Copyrights© Team Lalalala</h5>
+                    <h5>Tel - +94 779141958 | Fax - 011 2230530</h5>
+
+
+                    <div>
+
+
+                        <input type="button" name="" value="Click to view who made this page" class="button btnViewMaker" onclick="window.location.href='MinukaDv.html'">
+
+
+                    </div>
+
+
+
+
+
+
+                </center>
+            </footer>
+
+   
+    </body>
+
+
+</html>
+        
